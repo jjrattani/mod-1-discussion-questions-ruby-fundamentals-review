@@ -1,0 +1,73 @@
+def love_this_veggie?(vegetable)
+  if vegetable == "broccoli"
+    "Nah, thanks"
+  else
+    "I love it!"
+  end
+end
+
+
+--------
+array = ["apple", "pear", "face", "champagne", "palm tree", "aardvark", "pineapple"]
+
+#puts array.find {|i| "a" == i[0]}
+#(1..10).find           { |i| i % 5 == 0 && i % 7 == 0 }   #=> nil
+
+#array.find_all do |i|
+ # i.start_with?("a")
+#end
+
+test = array.find_all do |i|
+  i[0] == "a"
+end
+
+puts test
+
+---------
+
+word_count = ("Hi, isn't this a great and interesting sentence??").split (" ")
+puts word_count.length
+---------
+def friendly_greeting(name=nil) #nil only is passed if no name is given
+ name ||= "friend" #friend will overwrite bc its a value
+ puts "Hey there, #{name}"
+end
+
+friendly_greeting("jessica")
+-------
+def my_favorite_animal
+"cat". #same as return "cat"
+end
+
+best_animal = my_favorite_animal
+
+puts best_animal
+----------
+#How would you puts out any and all foods that are delicious?
+
+foods = {"pie" => "delicious", "broccoli" => "not delicious",
+"carrots" => "not delicious", "apples" => "delicious",
+"peanut butter" => "delicious"}
+
+foods.each do |key, value|
+  if value == "delicious"
+    p key
+  end
+end
+-----------
+#Delete all elements of the foods hash that are not delicious.
+
+foods = {"pie" => "delicious", "broccoli" => "not delicious",
+"carrots" => "not delicious", "apples" => "delicious",
+"peanut butter" => "delicious"}
+
+foods.each do |key, value|
+  if value == "not delicious"
+    foods.delete (key)
+  end
+end
+
+puts foods
+
+--------------
+
